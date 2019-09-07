@@ -1,0 +1,63 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Manjari', sans-serif;
+    background-color: #A6DDF1;
+}
+
+header {
+    font-size: 4em;
+    color: white;
+}
+
+.centered {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+}
+
+fieldset {
+    border: none;
+    padding: 1px;
+    display: block;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    font-family: 'Manjari', sans-serif;
+}
+
+#submitBtn {
+    background-color: #7acdeb;
+    border-radius: 6px;
+    border: 4px;
+    box-shadow: 0 1px #999;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    outline: none;
+    padding: 6px;
+}
+
+#submitBtn:hover {
+    background-color: #64c5e8;
+    border-radius: 6px;
+    border: 1px;
+}
+
+#submitBtn:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(2px);
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        font-size: 3em;
+    }
+  }
