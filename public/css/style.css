@@ -47,8 +47,8 @@ input {
 
 #submitBtn:hover {
     background-color: #64c5e8;
-    border-radius: 6px;
     border: 1px;
+    border-radius: 6px;
 }
 
 #submitBtn:active {
