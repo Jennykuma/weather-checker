@@ -6,23 +6,38 @@
     <title> Weather Checker </title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Manjari:400,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <div class="stars"></div>
     <div class="container centered">
         <header> Check the weather! </header>
         <fieldset>
             <form action="/" method="post">
-                <input id="cityInput" name="city" type="text" class="ghost-input" placeholder="enter a city." style="flex-grow: 8; margin-right: 5px" required>
+                <input id="cityInput" name="city" type="text" class="ghost-input" placeholder="enter a city followed by country code - ex: 'Boston, US'" style="flex-grow: 8; margin-right: 5px" required>
                 <input id="submitBtn" name="submit" type="submit" class="ghost-button" value="get weather" style='flex-grow: 1'>
             </form>
-            <% if(weather != null) { %>
-                <p> <%= weather %> </p>
-            <% } else { %>
-                <p> <%= error %> </p>
-            <% } %>
         </fieldset>
+        <p class="result"> 
+        <% if(weather != null) { %>
+                <%= weather %> 
+                <br/>
+                <%= humidity %>
+                <br/>
+                <%= clothing %>
+        <% } else { %>
+            <%= error %>
+        <% } %>
+        </p>
     </div>
 </body>
 
 </html>
+
+<script>
+    $('input#cityInput').focus(); // Always focus on the input box
+    $('input#cityInput').keypress(function() {
+        $('.result').html(""); // When user types, clear the results
+    })
+</script>

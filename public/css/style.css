@@ -2,28 +2,30 @@ body {
     width: 100%;
     margin: 0 auto;
     font-family: 'Manjari', sans-serif;
-    background-color: #A6DDF1;
-    color: #333333;
+    /*background-color: #A6DDF1;*/
+    color: #fff;
 }
 
 header {
     font-size: 4em;
     color: white;
+    margin-bottom: 2%;
+    text-align: center;
 }
 
 .centered {
     margin: 0;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
-    -ms-transform: translate(-50%, -40%);
-    transform: translate(-50%, -40%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
 fieldset {
     border: none;
-    padding: 1px;
     display: block;
+    padding: 1px;
 }
 
 form {
@@ -35,10 +37,10 @@ input {
 }
 
 #submitBtn {
-    background-color: #7acdeb;
+    background-color: #1e6276;
     border-radius: 6px;
     border: 4px;
-    box-shadow: 0 1px #999;
+    box-shadow: 0 1px #333;
     color: white;
     cursor: pointer;
     font-size: 1em;
@@ -47,18 +49,53 @@ input {
 }
 
 #submitBtn:hover {
-    background-color: #64c5e8;
+    background-color: #195162;
     border: 1px;
     border-radius: 6px;
 }
 
 #submitBtn:active {
-    box-shadow: 0 1px #666;
+    box-shadow: 0 1px #333;
     transform: translateY(2px);
 }
 
-@media only screen and (max-width: 600px) {
+.result {
+    line-height: 1.5;
+    text-align: center;
+}
+
+.stars {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+    background:#000 url(/images/stars.png) repeat top center;
+    z-index:0;
+    opacity: 0.4;
+}
+
+@media only screen and (max-width: 1250px) {
     header {
         font-size: 3em;
     }
+
+    body {
+        background: url('/images/bg-img-mobile.jpg') repeat-x;
+        background-size: cover;
+    }
+
+    .container {
+        width: 60%;
+    }
   }
+  
+@media (min-width: 1251px) {
+    body {      
+        background: url('/images/bg-img.jpg') repeat-x;
+        background-size: cover;
+    }
+}
