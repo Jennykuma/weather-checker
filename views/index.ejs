@@ -10,12 +10,17 @@
 
 <body>
     <div class="container centered">
-        <header> Check the weather ! </header>
+        <header> Check the weather! </header>
         <fieldset>
             <form action="/" method="post">
                 <input id="cityInput" name="city" type="text" class="ghost-input" placeholder="enter a city." style="flex-grow: 8; margin-right: 5px" required>
-                <input id="submitBtn" name="submit" type="submit" class="ghost-button" value="get weather">
+                <input id="submitBtn" name="submit" type="submit" class="ghost-button" value="get weather" style='flex-grow: 1'>
             </form>
+            <% if(weather != null) { %>
+                <p> <%= weather %> </p>
+            <% } else { %>
+                <p> <%= error %> </p>
+            <% } %>
         </fieldset>
     </div>
 </body>
