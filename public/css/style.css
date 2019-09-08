@@ -9,14 +9,14 @@ body {
 header {
     font-size: 4em;
     color: white;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     text-align: center;
 }
 
 .centered {
     margin: 0;
     position: absolute;
-    top: 30%;
+    top: 34%;
     left: 50%;
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);

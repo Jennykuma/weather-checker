@@ -7,9 +7,11 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Manjari:400,700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
 </head>
 
 <body>
+    <div id="particles-js"></div>
     <div class="stars"></div>
     <div class="container centered">
         <header> Check the weather! </header>
@@ -36,6 +38,11 @@
 </html>
 
 <script>
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', '/assets/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+
     $('input#cityInput').focus(); // Always focus on the input box
     $('input#cityInput').keypress(function() {
         $('.result').html(""); // When user types, clear the results
